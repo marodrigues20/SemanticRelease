@@ -1,0 +1,19 @@
+name: CI-Push-Master
+on: push
+jobs:
+  testing-action:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Release
+      uses: docker://antonyurchenko/git-release:latest
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DRAFT_RELEASE: "false"
+        PRE_RELEASE: "false"
+        CHANGELOG_FILE: "CHANGELOG.md"
+        ALLOW_EMPTY_CHANGELOG: "true"
+        ALLOW_TAG_PREFIX: "true"
+      #with:
+      #  args: |
+      #      build/*-amd64.zip
+    
