@@ -13,7 +13,7 @@ jobs:
         CHANGELOG_FILE: "CHANGELOG.md"
         ALLOW_EMPTY_CHANGELOG: "false"
         ALLOW_TAG_PREFIX: "false"
-      #with:
-      #  args: |
-      #      build/*-amd64.zip
+      with:
+        args: |
+            target/SemanticRelease-1.0-SNAPSHOT.jar
     
