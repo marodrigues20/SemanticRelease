@@ -7,6 +7,9 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
       - uses: GoogleCloudPlatform/release-please-action@v2
         with:
           release-type: node
