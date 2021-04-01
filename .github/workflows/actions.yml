@@ -1,14 +1,15 @@
 name: CI-Push-Master
 on:
   push:
-    tags:
-      - 'v*'
+
 jobs:
   testing-action:
     runs-on: ubuntu-latest
     steps:
     - name: Check out repository code
       uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
 
     - name: Set up JDK
       uses: actions/setup-java@v1
@@ -24,15 +25,10 @@ jobs:
         name: Semantic Version
         path: ./target/SemanticRelease-1.0-SNAPSHOT.jar
 
-    - name: Release
-      uses: docker://antonyurchenko/git-release:v3
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        DRAFT_RELEASE: "false"
-        PRE_RELEASE: "false"
-        CHANGELOG_FILE: "CHANGELOG.md"
-        ALLOW_EMPTY_CHANGELOG: "false"
-        ALLOW_TAG_PREFIX: "false"
+    - uses: BobAnkh/auto-generate-changelog@master
       with:
-        args: |
-          build/*-amd64.zip
+        REPO_NAME: 'BobAnkh/auto-generate-changelog'
+        ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        PATH: '/CHANGELOG.md'
+        COMMIT_MESSAGE: 'docs(CHANGELOG): update release notes'
+        TYPE: 'feat:Feature,fix:Bug Fixes,docs:Documentation,refactor:Refactor,perf:Performance Improvements'
