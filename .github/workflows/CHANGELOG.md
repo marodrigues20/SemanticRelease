@@ -10,3 +10,5 @@
 
 ### Changed
 - Refactor JavaScript wrapper
+
+[0.0.1]: https://github.com/marodrigues20/git-release/releases/tag/v0.0.1
