@@ -32,4 +32,4 @@ jobs:
         ALLOW_TAG_PREFIX: "false"
       with:
         args: |
-          target/*-SNAPSHOT.jar
+          build/*-amd64.zip
