@@ -10,8 +10,9 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
 
-      - uses: GoogleCloudPlatform/release-please-action@v2
-        with:
-          release-type: node
-          package-name: release-please-action
+      - name: semantic-release
+        uses: ahmadnassri/action-semantic-release@v1
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
