@@ -20,3 +20,16 @@ jobs:
       with:
         name: Semantic Version
         path: ./target/SemanticRelease-1.0-SNAPSHOT.jar
+
+    - name: Release
+      uses: docker://antonyurchenko/git-release:3.4.4
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DRAFT_RELEASE: "false"
+        PRE_RELEASE: "false"
+        CHANGELOG_FILE: "CHANGELOG.md"
+        ALLOW_EMPTY_CHANGELOG: "false"
+        ALLOW_TAG_PREFIX: "false"
+      with:
+        args: |
+          target/*-SNAPSHOT.jar
