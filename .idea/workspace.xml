@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ab974c7d-78e5-4689-9f0d-a2b332e8e013" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/actions.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/actions.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1qRds2F5135txfmRe6EAR6aw8Lm" />
+  <component name="ProjectViewState">
+    <option name="foldersAlwaysOnTop" value="false" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.github/workflows" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab974c7d-78e5-4689-9f0d-a2b332e8e013" name="Default Changelist" comment="" />
+      <created>1617046540143</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617046540143</updated>
+      <workItem from="1617046541567" duration="1152000" />
+      <workItem from="1617093365029" duration="989000" />
+      <workItem from="1617281490364" duration="4545000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat:[SP-277] - My first feature">
+      <created>1617047318074</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617047318074</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat:[SP-277] - My first feature">
+      <created>1617047573120</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1617047573120</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat:[SP-277] - My first feature">
+      <created>1617047647648</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1617047647648</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat:[SP-277] - My first feature">
+      <created>1617047689489</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1617047689489</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat:[SP-277] - My first feature">
+      <created>1617047765276</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1617047765276</updated>
+    </task>
+    <task id="LOCAL-00006" summary="[feat/SP-123] - Add CHANGELOG.md file">
+      <created>1617288003844</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1617288003844</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[feat/SP-123] - Add CHANGELOG.md file">
+      <created>1617288162828</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1617288162828</updated>
+    </task>
+    <task id="LOCAL-00008" summary="[feat/SP-123] - Add CHANGELOG.md file">
+      <created>1617288261714</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1617288261714</updated>
+    </task>
+    <task id="LOCAL-00009" summary="[feat/SP-123] - Add CHANGELOG.md file">
+      <created>1617288482695</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1617288482695</updated>
+    </task>
+    <task id="LOCAL-00010" summary="[feat/SP-123] - Add CHANGELOG.md file">
+      <created>1617289031915</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1617289031915</updated>
+    </task>
+    <task id="LOCAL-00011" summary="[feat/SP-123] - Add CHANGELOG.md file">
+      <created>1617289138299</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1617289138299</updated>
+    </task>
+    <task id="LOCAL-00012" summary="[feat/SP-123] - Add CHANGELOG.md file">
+      <created>1617289253080</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1617289253080</updated>
+    </task>
+    <task id="LOCAL-00013" summary="[feat/SP-123] - Add CHANGELOG.md file">
+      <created>1617289357150</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1617289357150</updated>
+    </task>
+    <task id="LOCAL-00014" summary="[feat/SP-123] - Add CHANGELOG.md file">
+      <created>1617289425285</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1617289425285</updated>
+    </task>
+    <task id="LOCAL-00015" summary="[feat/SP-123] - Add CHANGELOG.md file">
+      <created>1617289531096</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1617289531096</updated>
+    </task>
+    <task id="LOCAL-00016" summary="[feat/SP-123] - Add CHANGELOG.md file">
+      <created>1617289655940</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1617289655940</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat:[SP-277] - My first feature" />
+    <MESSAGE value="[feat/SP-123] - Add CHANGELOG.md file" />
+    <option name="LAST_COMMIT_MESSAGE" value="[feat/SP-123] - Add CHANGELOG.md file" />
+  </component>
+</project>
