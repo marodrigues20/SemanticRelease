@@ -12,6 +12,15 @@ jobs:
       with:
         java-version: 8
 
+    - name: Run Unit Tests
+      run: mvn clean install
+
+  - name: Upload Security Framework API Jar File
+      uses: actions/upload-artifact@v1
+      with:
+        name: Semantic Version
+        path: ./nova-auth-identity-provider-server/target/nova-auth-identity-provider-server-0.0.1.jar
+
     - name: Release
       uses: docker://antonyurchenko/git-release:3.4.4
       env:
