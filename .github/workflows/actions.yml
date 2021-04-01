@@ -1,24 +1,14 @@
-name: CI-Push-Master
 on:
   push:
-
+    branches:
+      - main
+name: release-please
 jobs:
-  testing-action:
+  release-please:
     runs-on: ubuntu-latest
     steps:
-    - name: Check out repository code
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
+      - uses: GoogleCloudPlatform/release-please-action@v2
+        with:
+          release-type: node
+          package-name: release-please-action
 
-    - uses: BobAnkh/auto-generate-changelog@master
-      with:
-        REPO_NAME: 'BobAnkh/auto-generate-changelog'
-        ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        PATH: '/CHANGELOG.md'
-        COMMIT_MESSAGE: 'docs(CHANGELOG): update release notes'
-        TYPE: 'feat:Feature,fix:Bug Fixes,docs:Documentation,refactor:Refactor,perf:Performance Improvements'
-
-    - name: Check CHANGELOG
-      run: |
-        cat .github/workflows
