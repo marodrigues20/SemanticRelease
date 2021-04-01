@@ -11,6 +11,13 @@ jobs:
       with:
         fetch-depth: 0
 
+    - uses: actions/cache@v1
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-SemanticRelease-1.0-SNAPSHOT-${{ hashFiles('**/pom.xml') }}
+        restore-keys: |
+          ${{ runner.os }}-SemanticRelease-1.0-SNAPSHOT-
+
     - name: Set up JDK
       uses: actions/setup-java@v1
       with:
@@ -35,4 +42,4 @@ jobs:
 
     - name: Check CHANGELOG
       run: |
-        ls .github/workflows
+        cat .github/workflows
