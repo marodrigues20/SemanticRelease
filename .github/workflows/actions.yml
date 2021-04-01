@@ -11,27 +11,6 @@ jobs:
       with:
         fetch-depth: 0
 
-    - uses: actions/cache@v1
-      with:
-        path: ~/.m2/repository
-        key: ${{ runner.os }}-SemanticRelease-1.0-SNAPSHOT-${{ hashFiles('**/pom.xml') }}
-        restore-keys: |
-          ${{ runner.os }}-SemanticRelease-1.0-SNAPSHOT-
-
-    - name: Set up JDK
-      uses: actions/setup-java@v1
-      with:
-        java-version: 8
-
-    - name: Build Project
-      run: mvn clean install
-
-    - name: Upload Security Framework API Jar File
-      uses: actions/upload-artifact@v1
-      with:
-        name: Semantic Version
-        path: ./target/SemanticRelease-1.0-SNAPSHOT.jar
-
     - uses: BobAnkh/auto-generate-changelog@v1.0.2
       with:
         REPO_NAME: 'BobAnkh/auto-generate-changelog'
