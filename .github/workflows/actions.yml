@@ -1,5 +1,8 @@
 name: CI-Push-Master
-on: push
+on:
+  push:
+    tags:
+      - 'v*'
 jobs:
   testing-action:
     runs-on: ubuntu-latest
@@ -22,7 +25,7 @@ jobs:
         path: ./target/SemanticRelease-1.0-SNAPSHOT.jar
 
     - name: Release
-      uses: docker://antonyurchenko/git-release:latest
+      uses: docker://antonyurchenko/git-release:v3
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         DRAFT_RELEASE: "false"
