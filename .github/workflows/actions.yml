@@ -32,3 +32,7 @@ jobs:
         PATH: '/CHANGELOG.md'
         COMMIT_MESSAGE: 'docs(CHANGELOG): update release notes'
         TYPE: 'feat:Feature,fix:Bug Fixes,docs:Documentation,refactor:Refactor,perf:Performance Improvements'
+
+    - name: Check CHANGELOG
+      run: |
+        ls .github/workflows
