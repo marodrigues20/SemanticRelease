@@ -32,7 +32,7 @@ jobs:
         name: Semantic Version
         path: ./target/SemanticRelease-1.0-SNAPSHOT.jar
 
-    - uses: BobAnkh/auto-generate-changelog@1.0.2
+    - uses: BobAnkh/auto-generate-changelog@v1.0.2
       with:
         REPO_NAME: 'BobAnkh/auto-generate-changelog'
         ACCESS_TOKEN: ${{secrets.GITHUB_TOKEN}}
