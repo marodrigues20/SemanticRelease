@@ -12,5 +12,4 @@ jobs:
 
       - name: Run Release Version Test
         run: |
-          ./mvnw semantic-gitlog:changelog
-          ./mvnw semantic-gitlog:derive
+          mvn semantic-gitlog:changelog
