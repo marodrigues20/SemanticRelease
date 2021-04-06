@@ -17,7 +17,5 @@ jobs:
 
       - name: Run Release Version Test
         run: |
-          mvn clean install
-          mvn conventional-commits:version release:prepare
-          mvn release:perform
-
+          ./mvnw semantic-gitlog:changelog
+          ./mvnw semantic-gitlog:derive
