@@ -13,7 +13,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run Unit Tests
-        run: mvn clean install
+        run: |
+          npm install @semantic-release/git -D
+          mvn clean install
 
       - name: Create a Release
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
