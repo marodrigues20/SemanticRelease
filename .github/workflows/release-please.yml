@@ -16,7 +16,7 @@ jobs:
         run: mvn clean install
 
       - name: Create a Release
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: npx semantic-release
         env: 
           GITHUB_TOKEN: ${{ secrets.CUSTOM_TOKEN }}
