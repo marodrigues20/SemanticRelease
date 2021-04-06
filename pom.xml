@@ -12,14 +12,49 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>team.yi.tools</groupId>
+            <artifactId>semantic-gitlog</artifactId>
+            <version>0.3.2</version>
+        </dependency>
+    </dependencies>
+
     <build>
-    <plugins>
-        <plugin>
-            <groupId>com.smartling.cc4j</groupId>
-            <artifactId>conventional-commits-maven-plugin</artifactId>
-            <version>0.1.0</version>
-        </plugin>
-    </plugins>
+        <plugins>
+            <plugin>
+                <groupId>team.yi.maven.plugin</groupId>
+                <artifactId>maven-semantic-gitlog</artifactId>
+                <version>0.19.4</version>
+                <configuration>
+                    <fileSets>
+                        <fileSet>
+                            <target>${project.basedir}/CHANGELOG.md</target>
+                            <template>${project.basedir}/config/gitlog/CHANGELOG.md.mustache</template>
+                        </fileSet>
+                        <fileSet>
+                            <target>${project.basedir}/CHANGELOG.zh-cn.md</target>
+                            <template>${project.basedir}/config/gitlog/CHANGELOG.zh-cn.md.mustache</template>
+                        </fileSet>
+                    </fileSets>
+                    <jsonFile>${project.basedir}/CHANGELOG.json</jsonFile>
+
+                    <issueUrlTemplate>${project.scm.url}/issues/:issueId</issueUrlTemplate>
+                    <commitUrlTemplate>${project.scm.url}/commit/:commitId</commitUrlTemplate>
+                    <mentionUrlTemplate>https://github.com/:username</mentionUrlTemplate>
+
+                    <updateProjectVersion>false</updateProjectVersion>
+                    <derivedVersionMark>NEXT_VERSION:==</derivedVersionMark>
+
+                    <commitLocales>
+                        <en>${project.basedir}/config/gitlog/commit-locales.md</en>
+                        <zh-cn>${project.basedir}/config/gitlog/commit-locales.zh-cn.md</zh-cn>
+                    </commitLocales>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
+
 
 </project>
