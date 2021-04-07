@@ -8,7 +8,7 @@ module.exports = {
             "@semantic-release/github",
             {
                 assets: [
-                    { path: "SemanticRelease-1.0-SNAPSHOT.jar", label: "Jar File" }
+                    { path: "./target/SemanticRelease-1.0-SNAPSHOT.jar", label: "Jar File" }
                 ]
             }
         ]
