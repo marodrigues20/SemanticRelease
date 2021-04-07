@@ -16,10 +16,14 @@ jobs:
         run: mvn clean install
 
       - name: Copy jar file
-        run: cp /target/SemanticRelease-1.0-SNAPSHOT.jar .
+        run: |
+          pwd
+          cp /target/SemanticRelease-1.0-SNAPSHOT.jar .
 
       - name: Create a Release
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: npx semantic-release
+        run: |
+          pwd
+          npx semantic-release
         env: 
           GITHUB_TOKEN: ${{ secrets.CUSTOM_TOKEN }}
