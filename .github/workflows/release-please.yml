@@ -17,7 +17,7 @@ jobs:
 
       - name: Copy jar file
         run: |
-          pwd
+          cd ${GITHUB_WORKSPACE}
           ls
           cp /target/SemanticRelease-1.0-SNAPSHOT.jar ${GITHUB_WORKSPACE}/
 
