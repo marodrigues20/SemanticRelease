@@ -2,8 +2,6 @@ on:
   release:
     branches:
       - main
-
-      
 name: release-please
 jobs:
   release-please:
