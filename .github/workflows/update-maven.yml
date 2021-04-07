@@ -10,5 +10,5 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
 
-      - name: Check Tag
-        run: echo ${{ github.event.release.tag_name }}
+      - name: Update Maven Version
+        run: mvn -B versions:set -DnewVersion=${{ github.event.release.tag_name }} -DgenerateBackupPoms=false
