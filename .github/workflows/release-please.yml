@@ -19,7 +19,7 @@ jobs:
         run: |
           pwd
           ls
-          cp /target/SemanticRelease-1.0-SNAPSHOT.jar .
+          cp /target/SemanticRelease-1.0-SNAPSHOT.jar ${GITHUB_WORKSPACE}
 
       - name: Create a Release
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
