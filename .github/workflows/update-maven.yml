@@ -1,0 +1,14 @@
+on:
+  release:
+    branches:
+      - main
+name: update-mvn
+jobs:
+  semantic-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Check Tag
+        run: echo ${{ github.event.release.tag_name }}
