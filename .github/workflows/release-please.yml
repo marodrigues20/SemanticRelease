@@ -23,6 +23,3 @@ jobs:
         run: npx semantic-release
         env: 
           GITHUB_TOKEN: ${{ secrets.CUSTOM_TOKEN }}
-
-      - name: Check Tag
-        run: echo ${{ github.event.release.tag_name }}
