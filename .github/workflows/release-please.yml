@@ -17,9 +17,8 @@ jobs:
 
       - name: Copy jar file
         run: |
-          cd ${GITHUB_WORKSPACE}
+          cd ${GITHUB_WORKSPACE}/target
           ls
-          cp ./target/SemanticRelease-1.0-SNAPSHOT.jar ${GITHUB_WORKSPACE}/
 
       - name: Create a Release
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
