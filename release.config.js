@@ -11,6 +11,9 @@ module.exports = {
                     { path: "SemanticRelease-*.jar", label: "Jar File" }
                 ]
             }
-        ]
+        ],
+        ["@semantic-release/exec", {
+            "prepareCmd": "./my-build-script.sh ${nextRelease.version}",
+        }],
     ]
 }
