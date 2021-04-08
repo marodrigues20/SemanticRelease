@@ -1,5 +1,5 @@
 module.exports = {
-    branches: "main",
+    "branches": ["main", "beta"],
     repositoryUrl: "https://github.com/marodrigues20/SemanticRelease",
     plugins: [
         "@semantic-release/commit-analyzer",
@@ -11,9 +11,6 @@ module.exports = {
                     { path: "SemanticRelease-*.jar", label: "Jar File" }
                 ]
             }
-        ],
-        ["@semantic-release/exec", {
-            "prepareCmd": "./my-build-script.sh ${nextRelease.version}",
-        }],
+        ]
     ]
 }

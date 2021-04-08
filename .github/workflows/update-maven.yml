@@ -1,0 +1,31 @@
+on:
+  release:
+    branches:
+      - main
+name: update-mvn
+jobs:
+  semantic-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Check release tag_name
+        run: echo ${{ github.event.release.tag_name }}
+
+      - name: Update Maven Version
+        run: |
+          mvn -B versions:set -DnewVersion=${{ github.event.release.tag_name }} -DgenerateBackupPoms=false
+
+      - name: Commit new Pom file
+        run: |
+          git config --global user.email "marodrigues20@gmail.com"
+          git config --global user.name "marodrigues20"
+          git fetch
+          git checkout main
+          git branch --set-upstream-to=origin/main
+          git pull
+          git add -A
+          git commit -m "Update Maven Version - Release"
+          git push
+
