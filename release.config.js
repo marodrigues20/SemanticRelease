@@ -1,5 +1,5 @@
 module.exports = {
-    "branches": ["main", "beta"],
+    "branches": {name: 'beta', prerelease: true},
     repositoryUrl: "https://github.com/marodrigues20/SemanticRelease",
     plugins: [
         "@semantic-release/commit-analyzer",
