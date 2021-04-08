@@ -18,6 +18,9 @@ jobs:
           cd ${GITHUB_WORKSPACE}/target
           cp SemanticRelease-*.jar ${GITHUB_WORKSPACE}
 
+      - name: Install npm
+        run: npm install @semantic-release/exec
+
       - name: Create a Release
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: npx semantic-release
