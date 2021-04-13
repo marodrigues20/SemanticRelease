@@ -2,7 +2,7 @@ on:
   push:
     branches:
       - beta
-      - master
+      - main
 name: release-please
 jobs:
   semantic-version:
