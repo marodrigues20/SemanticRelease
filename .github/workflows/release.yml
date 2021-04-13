@@ -23,7 +23,7 @@ jobs:
         run: npm install @semantic-release/exec
 
       - name: Create a Release
-        if: github.event_name == 'push' && github.ref == 'refs/heads/beta'
+        if: github.event_name == 'push' #&& github.ref == 'refs/heads/beta'
         run: npx semantic-release
         env: 
           GITHUB_TOKEN: ${{ secrets.CUSTOM_TOKEN }}
