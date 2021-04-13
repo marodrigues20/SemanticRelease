@@ -1,6 +1,7 @@
 module.exports = {
     "branches": ["master", {"name": "beta", "prerelease": true}],
     repositoryUrl: "https://github.com/marodrigues20/SemanticRelease",
+    debug:true,
     plugins: [
         "@semantic-release/commit-analyzer",
         "@semantic-release/release-notes-generator",
