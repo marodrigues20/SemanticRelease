@@ -1,19 +1,10 @@
 module.exports = {
-    branches: "main",
+    branches: [{ name: 'beta', prerelease: true }, 'master'],
     repositoryUrl: "https://github.com/marodrigues20/SemanticRelease",
+    debug:true,
     plugins: [
         "@semantic-release/commit-analyzer",
         "@semantic-release/release-notes-generator",
-        [
-            "@semantic-release/github",
-            {
-                assets: [
-                    { path: "SemanticRelease-*.jar", label: "Jar File" }
-                ]
-            }
-        ],
-        ["@semantic-release/exec", {
-            "prepareCmd": "./my-build-script.sh ${nextRelease.version}",
-        }],
+        "@semantic-release/github"
     ]
 }
