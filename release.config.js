@@ -1,6 +1,5 @@
 module.exports = {
-
-    branches: [ 'master', { "name": "beta", "prerelease": true }],
+    branches: [ 'main', { name: 'beta', prerelease: true }],
     repositoryUrl: "https://github.com/marodrigues20/SemanticRelease",
     debug:true,
     plugins: [
