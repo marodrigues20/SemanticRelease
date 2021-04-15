@@ -24,6 +24,12 @@ jobs:
 
       - name: Create a Release
         if: github.event_name == 'push' #&& github.ref == 'refs/heads/beta'
-        run: npx -d semantic-release
+        run: npx semantic-release --dry-run --no-ci
         env: 
           GITHUB_TOKEN: ${{ secrets.CUSTOM_TOKEN }}
+
+      - name: Update Pom File
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: |
+          echo ${{ github.event.release.tag_name }}
+          mvn -B versions:set -DnewVersion=${{ github.event.release.tag_name }} -DgenerateBackupPoms=false
