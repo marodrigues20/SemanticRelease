@@ -11,6 +11,9 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
 
+      - name: List Content
+        run: ls -la
+
       - name: Run Unit Tests
         run: mvn clean install
 
@@ -34,11 +37,7 @@ jobs:
           echo ${{ github.event.release.tag_name }}
           mvn -B versions:set -DnewVersion=17.4.2 -DgenerateBackupPoms=false
 
-      - name: List files stage
-        run: |
-          ls -la
-
-      - uses: EndBug/add-and-commit@v7 # You can change this to use a specific version
+      - uses: EndBug/add-and-commit@v7
         with:
           author_name: Alexandre
           author_email: marodrigues20@gmail.com
