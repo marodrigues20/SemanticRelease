@@ -41,4 +41,4 @@ jobs:
           branch: beta
           cwd: '.'
           message: 'New Version Pom file'
-          pull_strategy: 'NO-PULL or --no-rebase or --no-ff or --rebase'
+          add: 'pom.xml'
