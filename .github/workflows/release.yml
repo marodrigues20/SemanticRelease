@@ -33,3 +33,12 @@ jobs:
         run: |
           echo ${{ github.event.release.tag_name }}
           mvn -B versions:set -DnewVersion=17.4.2 -DgenerateBackupPoms=false
+
+      - uses: EndBug/add-and-commit@v7 # You can change this to use a specific version
+        with:
+          author_name: Alexandre
+          author_email: marodrigues20@gmail.com
+          branch: beta
+          cwd: '.'
+          message: 'New Version Pom file'
+          pull_strategy: 'NO-PULL or --no-rebase or --no-ff or --rebase'
