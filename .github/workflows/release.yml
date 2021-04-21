@@ -11,6 +11,14 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
 
+      - uses: actions/setup-node@v2
+      - uses: beemojs/conventional-pr-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: List Content
+        run: ls -la
+
       - name: Run Unit Tests
         run: mvn clean install
 
@@ -24,6 +32,25 @@ jobs:
 
       - name: Create a Release
         if: github.event_name == 'push' #&& github.ref == 'refs/heads/beta'
-        run: npx semantic-release
+        run: npx semantic-release --dry-run --no-ci
         env: 
           GITHUB_TOKEN: ${{ secrets.CUSTOM_TOKEN }}
+
+      - name: Update Pom File
+        if: github.event_name == 'push' #&& github.ref == 'refs/heads/beta'
+        run: |
+          echo ${{ github.event.release.tag_name }}
+          mvn -B versions:set -DnewVersion=17.4.2 -DgenerateBackupPoms=false
+
+      - name: List files stage
+        run: |
+          ls -la
+
+      - uses: EndBug/add-and-commit@v7 # You can change this to use a specific version
+        with:
+          author_name: Alexandre
+          author_email: marodrigues20@gmail.com
+          branch: beta
+          cwd: '.'
+          message: 'New Version Pom file'
+          add: 'pom.xml'
