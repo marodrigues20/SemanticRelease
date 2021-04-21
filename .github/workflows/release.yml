@@ -37,7 +37,11 @@ jobs:
           echo ${{ github.event.release.tag_name }}
           mvn -B versions:set -DnewVersion=17.4.2 -DgenerateBackupPoms=false
 
-      - uses: EndBug/add-and-commit@v7
+      - name: List files stage
+        run: |
+          ls -la
+
+      - uses: EndBug/add-and-commit@v7 # You can change this to use a specific version
         with:
           author_name: Alexandre
           author_email: marodrigues20@gmail.com
