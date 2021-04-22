@@ -36,6 +36,17 @@ jobs:
         env: 
           GITHUB_TOKEN: ${{ secrets.CUSTOM_TOKEN }}
 
+      - name: Extract tag name
+        id: tag
+        uses: actions/github-script@0.2.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            return context.payload.ref.replace(/\/refs\/tags\//, '');
+
+      - name: Echo Alexandre
+        run: echo ${{ steps.tag.outputs.result }}
+
       - name: Update Pom File
         if: github.event_name == 'push' #&& github.ref == 'refs/heads/beta'
         run: |
