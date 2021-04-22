@@ -45,7 +45,7 @@ jobs:
             return context.payload.ref.replace(/\/refs\/tags\//, '');
 
       - name: Echo Alexandre
-        run: echo ${{ steps.tag.outputs.result }}
+        run: echo Steps  ${{ steps.tag.outputs.result }}
 
       - name: Update Pom File
         if: github.event_name == 'push' #&& github.ref == 'refs/heads/beta'
