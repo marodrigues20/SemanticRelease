@@ -37,12 +37,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.CUSTOM_TOKEN }}
 
       - name: Extract tag name
-        id: tag
-        uses: actions/github-script@0.2.0
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            return context.payload.ref.replace(/\/refs\/tags\//, '');
+        run: |
+          git describe
+          git describe --tags --abbrev=0
+          git describe --tags $(git rev-list --tags --max-count=1)
+          latesttag=$(git describe --tags)
+          echo checking out ${latesttag}
 
       - name: Echo Alexandre
         run: echo Steps  ${{ steps.tag.outputs.result }}
