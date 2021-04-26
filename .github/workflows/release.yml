@@ -28,7 +28,6 @@ jobs:
           cp SemanticRelease-*.jar ${GITHUB_WORKSPACE}
 
       - name: Upload Security Framework API Jar File
-        if: github.event_name == 'push' && github.ref == 'refs/heads/dev'
         uses: actions/upload-artifact@v1
         with:
           name: Security Framework API - Java ${{ matrix.java-version }}
