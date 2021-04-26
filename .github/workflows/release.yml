@@ -22,10 +22,13 @@ jobs:
       - name: Run Unit Tests
         run: mvn clean install
 
-      - name: Copy jar file
-        run: |
-          cd ${GITHUB_WORKSPACE}/target
-          cp SemanticRelease-*.jar ${GITHUB_WORKSPACE}
+      #- name: Copy jar file
+      #  run: |
+      #    cd ${GITHUB_WORKSPACE}/target
+      #    cp SemanticRelease-*.jar ${GITHUB_WORKSPACE}
+
+      - name: Run Unit Tests
+          run: ls
 
       - name: Upload Security Framework API Jar File
         uses: actions/upload-artifact@v1
