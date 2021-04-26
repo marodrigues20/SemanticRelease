@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: Security Framework API - Java ${{ matrix.java-version }}
-          path: ./target/SemanticRelease-*.jar
+          path: ./target/SemanticRelease-(?)*.jar
 
       #- name: Install npm
       #  run: npm install @semantic-release/exec
