@@ -28,13 +28,13 @@ jobs:
       #    cp SemanticRelease-*.jar ${GITHUB_WORKSPACE}
 
       - name: Run Unit Tests
-        run: ls
+        run: ls /target
 
       - name: Upload Security Framework API Jar File
         uses: actions/upload-artifact@v1
         with:
           name: Security Framework API - Java ${{ matrix.java-version }}
-          path: /SemanticRelease/target/SemanticRelease-1.0-SNAPSHOT.jar
+          path: /target/SemanticRelease-1.0-SNAPSHOT.jar
 
       #- name: Install npm
       #  run: npm install @semantic-release/exec
